@@ -1,0 +1,260 @@
+Estilos para la versión mini del reproductor de audio*/
+.audio-player-big {width: 90px;height: 90px;}
+.simple-audio-player .mejs-container {
+  background: transparent;
+}
+
+
+.simple-audio-player .mejs-container .mejs-controls {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: #ffffff;
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: radial-gradient(ellipse at center, #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
+}
+
+.simple-audio-player .mejs-container .mejs-controls div {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.simple-audio-player .mejs-controls .mejs-button button {
+	width: 90px;
+	height: 90px;
+	margin: 0;
+}
+
+.simple-audio-player .mejs-controls .mejs-button button,
+.simple-audio-player .mejs-controls .mejs-pause button {
+	background:none !important;
+}
+
+.simple-audio-player .mejs-controls .mejs-button button:focus {
+	outline: none;
+}
+.simple-audio-player .mejs-controls .mejs-button button:before,
+.simple-audio-player .mejs-controls .mejs-pause button:before {
+	font-family:'icomoon';
+	font-size: 45px;
+	color: #333;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	border-radius: 50%;
+}
+.simple-audio-player .mejs-controls .mejs-button button:before {
+	content: "\e037";
+}
+.simple-audio-player .mejs-controls .mejs-pause button:before {
+	content: "\e034";
+}
+
+
+
+/**/
+
+/*Estilos para listado de audios*/
+/*Colores*/
+
+/*Color por defecto*/
+.audio-list li .mejs-controls .mejs-button button:before
+{
+background: #57167d;
+background: -moz-radial-gradient(center, ellipse cover, #57167d 0%, #4f1375 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #57167d 0%,#4f1375 100%);
+background: radial-gradient(ellipse at center, #57167d 0%,#4f1375 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57167d', endColorstr='#4f1375',GradientType=1 );
+}
+
+/*Variantes de color*/
+.audio-list li.purple .mejs-controls .mejs-button button:before
+{
+background: #7864ac;
+background: -moz-radial-gradient(center, ellipse cover, #7864ac 0%, #6a5a99 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #7864ac 0%,#6a5a99 100%);
+background: radial-gradient(ellipse at center, #7864ac 0%,#6a5a99 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7864ac', endColorstr='#6a5a99',GradientType=1 );
+}
+
+.audio-list li.blue .mejs-controls .mejs-button button:before
+{
+background: #57167d;
+background: -moz-radial-gradient(center, ellipse cover, #57167d 0%, #4f1375 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #57167d 0%,#4f1375 100%);
+background: radial-gradient(ellipse at center, #57167d 0%,#4f1375 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57167d', endColorstr='#4f1375',GradientType=1 );
+}
+
+.audio-list li.aqua .mejs-controls .mejs-button button:before
+{
+background: #75c4af;
+background: -moz-radial-gradient(center, ellipse cover, #75c4af 0%, #6bb29e 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #75c4af 0%,#6bb29e 100%);
+background: radial-gradient(ellipse at center, #75c4af 0%,#6bb29e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75c4af', endColorstr='#6bb29e',GradientType=1 );
+}
+
+.audio-list li.gold .mejs-controls .mejs-button button:before
+{
+background: #ffcf6b;
+background: -moz-radial-gradient(center, ellipse cover, #ffcf6b 0%, #edbf63 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #ffcf6b 0%,#edbf63 100%);
+background: radial-gradient(ellipse at center, #ffcf6b 0%,#edbf63 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcf6b', endColorstr='#edbf63',GradientType=1 );
+}
+
+.audio-list li.darkorange .mejs-controls .mejs-button button:before
+{
+background: #f68e2f;
+background: -moz-radial-gradient(center, ellipse cover, #f68e2f 0%, #e5832d 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #f68e2f 0%,#e5832d 100%);
+background: radial-gradient(ellipse at center, #f68e2f 0%,#e5832d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f68e2f', endColorstr='#e5832d',GradientType=1 );
+}
+
+.audio-list li.darkred .mejs-controls .mejs-button button:before
+{
+background: #c62127;
+background: -moz-radial-gradient(center, ellipse cover, #c62127 0%, #ad1d22 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #c62127 0%,#ad1d22 100%);
+background: radial-gradient(ellipse at center, #c62127 0%,#ad1d22 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c62127', endColorstr='#ad1d22',GradientType=1 );
+}
+
+.audio-list li.indianred .mejs-controls .mejs-button button:before
+{
+background: #d35058;
+background: -moz-radial-gradient(center, ellipse cover, #d35058 0%, #c64b51 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #d35058 0%,#c64b51 100%);
+background: radial-gradient(ellipse at center, #d35058 0%,#c64b51 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d35058', endColorstr='#c64b51',GradientType=1 );
+}
+
+.audio-list li.sienna .mejs-controls .mejs-button button:before
+{
+background: #b07764;
+background: -moz-radial-gradient(center, ellipse cover, #b07764 0%, #a06c5b 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #b07764 0%,#a06c5b 100%);
+background: radial-gradient(ellipse at center, #b07764 0%,#a06c5b 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b07764', endColorstr='#a06c5b',GradientType=1 );
+}
+
+.audio-list li.slateblue .mejs-controls .mejs-button button:before
+{
+background: #7f88c1;
+background: -moz-radial-gradient(center, ellipse cover, #7f88c1 0%, #727bad 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #7f88c1 0%,#727bad 100%);
+background: radial-gradient(ellipse at center, #7f88c1 0%,#727bad 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f88c1', endColorstr='#727bad',GradientType=1 );
+}
+
+.audio-list li.steelblue .mejs-controls .mejs-button button:before
+{
+background: #0b6493;
+background: -moz-radial-gradient(center, ellipse cover, #0b6493 1%, #094e77 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #0b6493 1%,#094e77 100%);
+background: radial-gradient(ellipse at center, #0b6493 1%,#094e77 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b6493', endColorstr='#094e77',GradientType=1 );
+}
+
+.audio-list li.orange .mejs-controls .mejs-button button:before
+{
+background: #f5b037;
+background: -moz-radial-gradient(center, ellipse cover, #f5b037 1%, #e8a635 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #f5b037 1%,#e8a635 100%);
+background: radial-gradient(ellipse at center, #f5b037 1%,#e8a635 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5b037', endColorstr='#e8a635',GradientType=1 );
+}
+
+.audio-list li {
+	display: block;
+	background: #fff;
+	height:70px;
+	border-bottom: solid 1px #efefef;
+	position: relative;
+
+	padding: 0 100px 0 90px;
+}
+.audio-list li:first-child {border-top: solid 1px #efefef;}
+
+.audio-list li .mejs-container .mejs-controls {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	background: transparent;
+	border-radius: 0;
+}
+
+
+.audio-list li .mejs-container .mejs-controls div {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	border-radius: 0;
+}
+.audio-list li .mejs-controls .mejs-button button {
+	width: 100%;
+	height: 50px;
+	border-radius: 0;
+}
+.audio-list li .mejs-controls .mejs-button button:before,
+.audio-list li .mejs-controls .mejs-pause button:before {
+	font-size: 35px;
+	color: rgba(255,255,255,.6);
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+}
+
+.audio-list li .control-button {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	width: 100%;
+	padding-right: 120px;
+}
+.audio-list li .audio-info {
+	float: left;
+	margin-top: 18px;
+	width: 100%;
+	/*padding: 0 100px 0 90px;*/
+}
+.audio-list li .audio-info .audio-title {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	white-space: nowrap; 
+	width: 100%; 
+	overflow: hidden;
+	text-overflow: ellipsis; 
+}
+.audio-list li .audio-info .audio-description {
+	display: block;
+	font-size: 12px;
+	color: #888888;
+	padding-top: 6px;
+	white-space: nowrap; 
+	width: 100%; 
+	overflow: hidden;
+	text-overflow: ellipsis; 
+}
+.audio-list li .audio-download-button {
+	position: absolute;
+	font-size: 24px;
+	display: block;
+	border: solid 1px;
+	width: 40px;
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 50%;
+	top: 14px;
+	right: 20px;
+}
+/*

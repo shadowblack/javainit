@@ -1,0 +1,168 @@
+<manifest alg="2" build="2017.0.0.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="www.conectium.com" resolutions="1x" timestamp="1498243413250">
+  <folder name="css">
+    <file name="site_global.css" crc="189584717"/>
+    <file name="index.css" crc="105100185" ref="index"/>
+    <file name="nomq_index.css" crc="102688357" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="163421577" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="168988563" ref="index"/>
+    <file name="webpro.js" crc="3848665353" ref="index"/>
+    <file name="musewpslideshow.js" crc="4041717617" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="36492500" ref="index"/>
+    <file name="touchswipe.js" crc="404375771" ref="index"/>
+    <file name="jquery.musemenu.js" crc="146495465" ref="index"/>
+    <file name="jquery.watch.js" crc="104486786" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="379354253" ref="index"/>
+    <file name="form_check.php" crc="158155501" ref="index"/>
+    <file name="form_throttle.php" crc="3992970984" ref="index"/>
+    <file name="form_process.php" crc="4078697226" ref="index"/>
+    <file name="form-u17263.php" crc="3908098758" ref="index"/>
+    <file name="musewpdisclosure.js" crc="4275188064" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="4065090679" ref="index"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="4146931122" ref="index"/>
+    <file name="require.js" crc="244322403" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="71882664" ref="index"/>
+    <file name="cabecera-03.jpg" crc="253370435" seo="true" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="cabecera-02.jpg" crc="3854635014" seo="true" ref="index"/>
+    <file name="cabecera-01.jpg" crc="303694494" seo="true" ref="index"/>
+    <file name="u5491-6.png" crc="4070140303" ref="index"/>
+    <file name="u5566-8.png" crc="4286536500" ref="index"/>
+    <file name="flecha-izquierda.png" crc="3975364059" ref="index"/>
+    <file name="flecha-derecha.png" crc="152649081" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="logo-creatico.png" crc="297841705" seo="true" ref="index"/>
+    <file name="u26040.png" crc="4142758755" ref="index"/>
+    <file name="u26040-r.png" crc="3828888950" ref="index"/>
+    <file name="u4002.png" crc="4202329952" ref="index"/>
+    <file name="u4002-r.png" crc="531395898" ref="index"/>
+    <file name="u3974.png" crc="202110513" ref="index"/>
+    <file name="u3974-r.png" crc="4263303213" ref="index"/>
+    <file name="u3989.png" crc="4265959632" ref="index"/>
+    <file name="u3989-r.png" crc="4083037317" ref="index"/>
+    <file name="u15751.png" crc="123110128" ref="index"/>
+    <file name="u15751-r.png" crc="3829337369" ref="index"/>
+    <file name="u21673.png" crc="4095907492" ref="index"/>
+    <file name="u21673-r.png" crc="3921399507" ref="index"/>
+    <file name="u5758.png" crc="187930035" ref="index"/>
+    <file name="u5758-r.png" crc="4108157072" ref="index"/>
+    <file name="u7105-4.png" crc="4043603269" ref="index"/>
+    <file name="quienes-somos.png" crc="176392484" ref="index"/>
+    <file name="u7116-5.png" crc="210363104" ref="index"/>
+    <file name="resonsive.png" crc="357846647" ref="index"/>
+    <file name="u7121-4.png" crc="531706501" ref="index"/>
+    <file name="u16241-4.png" crc="249800314" ref="index"/>
+    <file name="fondo2.jpg" crc="400738715" ref="index"/>
+    <file name="smartblocks.png" crc="3908628733" seo="true" ref="index"/>
+    <file name="almaguia.png" crc="4088324950" seo="true" ref="index"/>
+    <file name="alamano.png" crc="283418552" seo="true" ref="index"/>
+    <file name="untitled-1-01.svg" crc="40339713" seo="true" ref="index"/>
+    <file name="untitled-1-01_poster_.png" crc="4150520726" ref="index"/>
+    <file name="untitled-1-02.svg" crc="3988484494" seo="true" ref="index"/>
+    <file name="untitled-1-02_poster_.png" crc="321014428" ref="index"/>
+    <file name="u30156-4.png" crc="459798631" ref="index"/>
+    <file name="u20939.png" crc="442098204" ref="index"/>
+    <file name="u20939-r.png" crc="355990256" ref="index"/>
+    <file name="mercurio.png" crc="4175161188" seo="true" ref="index"/>
+    <file name="grafico.png" crc="412497843" ref="index"/>
+    <file name="web.png" crc="329871790" ref="index"/>
+    <file name="app.png" crc="484025998" ref="index"/>
+    <file name="u22143-4.png" crc="41017355" ref="index"/>
+    <file name="u17238-4.png" crc="4043603269" ref="index"/>
+    <file name="pasted-svg-504384x127.svg" crc="452000367" seo="true" ref="index"/>
+    <file name="pasted svg 504384x127_poster_.png" crc="119791103" ref="index"/>
+    <file name="pasted-svg-89758x89.svg" crc="225326000" seo="true" ref="index"/>
+    <file name="pasted svg 89758x89_poster_.png" crc="224414093" ref="index"/>
+    <file name="pasted-svg-89758x892.svg" crc="41854144" seo="true" ref="index"/>
+    <file name="pasted svg 89758x89_poster_2.png" crc="4125866343" ref="index"/>
+    <file name="pasted-svg-89758x893.svg" crc="3758175561" seo="true" ref="index"/>
+    <file name="pasted svg 89758x89_poster_3.png" crc="4265815115" ref="index"/>
+    <file name="pasted-svg-89758x894.svg" crc="132402581" seo="true" ref="index"/>
+    <file name="pasted svg 89758x89_poster_4.png" crc="84799903" ref="index"/>
+    <file name="u5416-8.png" crc="477860902" ref="index"/>
+    <file name="u5491-62.png" crc="4252412021" ref="index"/>
+    <file name="u5566-82.png" crc="3909411355" ref="index"/>
+    <file name="u260402.png" crc="410900555" ref="index"/>
+    <file name="u26040-r2.png" crc="4176554228" ref="index"/>
+    <file name="u40022.png" crc="3817640995" ref="index"/>
+    <file name="u4002-r2.png" crc="4122775223" ref="index"/>
+    <file name="u39742.png" crc="53242088" ref="index"/>
+    <file name="u3974-r2.png" crc="3855851778" ref="index"/>
+    <file name="u39892.png" crc="165167865" ref="index"/>
+    <file name="u3989-r2.png" crc="3830161935" ref="index"/>
+    <file name="u157512.png" crc="3937034344" ref="index"/>
+    <file name="u15751-r2.png" crc="228557800" ref="index"/>
+    <file name="u216732.png" crc="4288105149" ref="index"/>
+    <file name="u21673-r2.png" crc="4179199184" ref="index"/>
+    <file name="u57582.png" crc="187930035" ref="index"/>
+    <file name="u5758-r2.png" crc="4108157072" ref="index"/>
+    <file name="u16241-42.png" crc="21927598" ref="index"/>
+    <file name="u7105-42.png" crc="21927598" ref="index"/>
+    <file name="u209392.png" crc="442098204" ref="index"/>
+    <file name="u20939-r2.png" crc="355990256" ref="index"/>
+    <file name="u22143-42.png" crc="313984053" ref="index"/>
+    <file name="mercurio345x212.png" crc="3773220368" seo="true" ref="index"/>
+    <file name="u17238-42.png" crc="21927598" ref="index"/>
+    <file name="u5416-82.png" crc="195580195" ref="index"/>
+    <file name="u5491-63.png" crc="3932357457" ref="index"/>
+    <file name="u5566-83.png" crc="4145607959" ref="index"/>
+    <file name="u260403.png" crc="410900555" ref="index"/>
+    <file name="u26040-r3.png" crc="4176554228" ref="index"/>
+    <file name="u40023.png" crc="3817640995" ref="index"/>
+    <file name="u4002-r3.png" crc="4122775223" ref="index"/>
+    <file name="u39743.png" crc="53242088" ref="index"/>
+    <file name="u3974-r3.png" crc="3855851778" ref="index"/>
+    <file name="u39893.png" crc="165167865" ref="index"/>
+    <file name="u3989-r3.png" crc="3830161935" ref="index"/>
+    <file name="u157513.png" crc="3937034344" ref="index"/>
+    <file name="u15751-r3.png" crc="228557800" ref="index"/>
+    <file name="u216733.png" crc="4288105149" ref="index"/>
+    <file name="u21673-r3.png" crc="4179199184" ref="index"/>
+    <file name="u57583.png" crc="3906780497" ref="index"/>
+    <file name="u5758-r3.png" crc="298993851" ref="index"/>
+    <file name="u7105-43.png" crc="177604113" ref="index"/>
+    <file name="u209393.png" crc="382457032" ref="index"/>
+    <file name="u20939-r3.png" crc="3822221795" ref="index"/>
+    <file name="u22143-43.png" crc="197740975" ref="index"/>
+    <file name="mercurio247x152.png" crc="250204482" seo="true" ref="index"/>
+    <file name="u16241-43.png" crc="456125463" ref="index"/>
+    <file name="u17238-43.png" crc="456125463" ref="index"/>
+    <file name="menu.png" crc="3935061649" ref="index"/>
+    <file name="cerrado.png" crc="473227605" ref="index"/>
+    <file name="u4534-4.png" crc="336908705" ref="index"/>
+    <file name="u4554-4.png" crc="4220302275" ref="index"/>
+    <file name="u4526-4.png" crc="402415686" ref="index"/>
+    <file name="u4561-4.png" crc="4166192903" ref="index"/>
+    <file name="u16018-4.png" crc="512519364" ref="index"/>
+    <file name="u16113-4.png" crc="509606093" ref="index"/>
+    <file name="u5416-83.png" crc="270319710" ref="index"/>
+    <file name="u5491-64.png" crc="226321857" ref="index"/>
+    <file name="u5566-84.png" crc="231052696" ref="index"/>
+    <file name="u57584.png" crc="187930035" ref="index"/>
+    <file name="u5758-r4.png" crc="4108157072" ref="index"/>
+    <file name="u209394.png" crc="442098204" ref="index"/>
+    <file name="u20939-r4.png" crc="355990256" ref="index"/>
+    <file name="mercurio281x173.png" crc="459359065" seo="true" ref="index"/>
+    <file name="u5416-84.png" crc="286188492" ref="index"/>
+    <file name="u5491-65.png" crc="58761072" ref="index"/>
+    <file name="u5566-85.png" crc="4220984896" ref="index"/>
+    <file name="u4534-42.png" crc="447179029" ref="index"/>
+    <file name="u4554-42.png" crc="468443683" ref="index"/>
+    <file name="u4526-42.png" crc="3971435581" ref="index"/>
+    <file name="u4561-42.png" crc="438359560" ref="index"/>
+    <file name="u16018-42.png" crc="3815151164" ref="index"/>
+    <file name="u16113-42.png" crc="376244347" ref="index"/>
+    <file name="u57585.png" crc="187930035" ref="index"/>
+    <file name="u5758-r5.png" crc="4108157072" ref="index"/>
+    <file name="fondo2-u19161-3-fr.jpg" crc="3895598489" ref="index"/>
+    <file name="u209395.png" crc="442098204" ref="index"/>
+    <file name="u20939-r5.png" crc="355990256" ref="index"/>
+  </folder>
+  <file name="index.html" crc="3932944621" seo="true" mt="1498243326912" redirect="true"/>
+</manifest>

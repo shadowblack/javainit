@@ -22,6 +22,26 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>website</groupId>
+      <artifactId>website_artifact</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+
 
   </dependencies>
   <build>
