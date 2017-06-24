@@ -19,13 +19,10 @@ import java.util.Properties;
  */
 public class Email {
 
-    public Email() {
-        System.out.print("hola");
-    }
 
     public void sendMail(String message_user){
 
-        Log log = null;
+        Logger log = LoggerFactory.getLogger(Email.class);
 
         String asunto = "";
 
@@ -64,10 +61,10 @@ public class Email {
             message.saveChanges();
             tr.sendMessage(message, message.getAllRecipients());
             tr.close();
-            //log.debug("El mensaje fue enviado exitosamente");
+            log.debug("El mensaje fue enviado exitosamente");
 
         } catch (Exception e) {
-           // log.error(Log.toTrace(e));
+            log.error(e.getMessage());
         }
     }
 

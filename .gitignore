@@ -1,2 +1,15 @@
-
-.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml
+.iml
+.idea
+.class
+target/classes/com/connectium/controllers/
+target/generated-sources/
+target/website_artifact/._.DS_Store
+target/website_artifact/WEB-INF/classes/com/connectium/controllers/
+target/website_artifact/WEB-INF/lib/
+target/website_artifact/_index.jsp
+target/website_artifact/css/
+target/website_artifact/images/
+target/website_artifact/index.html
+target/website_artifact/muse_manifest.xml
+target/website_artifact/scripts/
+target/website_artifact/sitemap.xml
