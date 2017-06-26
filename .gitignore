@@ -1,5 +1,6 @@
 .iml
 .idea
+.idea/*
 .class
 target/classes/com/connectium/controllers/
 target/generated-sources/
