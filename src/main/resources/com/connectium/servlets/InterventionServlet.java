@@ -7,10 +7,12 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FilenameUtils;
 
+import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.FileImageOutputStream;
+import javax.imageio.stream.ImageOutputStream;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +25,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 /**
- * Created by lmarin on 12/6/2017.
+ * Created by lmarin on 19/9/2017.
  */
 @WebServlet(urlPatterns = "/upload",name = "Inter")
 public class InterventionServlet extends HttpServlet {
@@ -47,39 +49,55 @@ public class InterventionServlet extends HttpServlet {
 
                     response.setContentType("image/jpeg");
 
-                   // Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
-
-                    String pathToWeb = getServletContext().getRealPath(File.separator);
-                    //File f = new File(pathToWeb + "avajavalogo.jpg");
-                    // String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
-                    //String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
                     InputStream fileContent = filecontent/*filePart.getInputStream()*/;
                     BufferedImage bi = ImageIO.read(fileContent);
 
-                    ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
+                    // guarda en el disco duro la informacion
+
+                    /*ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
                     ImageWriteParam iwp = writer.getDefaultWriteParam();
                     iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                    iwp.setCompressionQuality(1);
+                    iwp.setCompressionQuality(0.1f);
 
-                    //FileImageOutputStream output = new FileImageOutputStream(file);
+                    writer.setOutput(new FileImageOutputStream(
+                            new File(*//*folder.toString() +*//* "/" + filename + ".jpg")));
+                    writer.setOutput(new FileImageOutputStream(
+                            new File(*//*folder.toString() +*//* *//*"J:\\hitok\\Compartido/"*//* "./"+ filename + "_temp.jpg")));
 
-                    writer.setOutput(bi);
+                    writer.write(null, new IIOImage(bi, null, null), iwp);*/
 
-                    OutputStream out = response.getOutputStream();
-                    ImageIO.write(bi, "jpeg", out);
-                    out.close();
+//                    writer.setOutput(bi);
 
+                    ByteArrayOutputStream compressed = new ByteArrayOutputStream();
+                    ImageOutputStream outputStream = ImageIO.createImageOutputStream(compressed);
+                    ImageWriter jpgWriter = ImageIO.getImageWritersByFormatName("jpg").next();
+
+                    ImageWriteParam jpgWriteParam = jpgWriter.getDefaultWriteParam();
+                    jpgWriteParam.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+                    jpgWriteParam.setCompressionQuality(0.1f);
+
+                    jpgWriter.setOutput(outputStream);
+                    jpgWriter.write(null, new IIOImage(bi, null, null), jpgWriteParam);
+
+                    // mostrando archivo original
+                    /*OutputStream out = response.getOutputStream();
+                    ImageIO.write(bi, "jpeg", out);*/
+
+                    // mostrando archivo comprimido
+                    // Dispose the writer to free resources
+                    jpgWriter.dispose();
+
+                    // Get data for further processing...
+                    byte[] jpegData = compressed.toByteArray();
+
+                    response.getOutputStream().write(jpegData);
+                    response.getOutputStream().flush();
+                    response.getOutputStream().close();
                 }
             }
         } catch (FileUploadException e) {
             e.printStackTrace();
         }
 
-
-
-      /*  String description = request.getParameter("description"); // Retrieves <input type="text" name="description">
-        Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
-        String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
-        InputStream fileContent = filePart.getInputStream();*/
     }
 }
