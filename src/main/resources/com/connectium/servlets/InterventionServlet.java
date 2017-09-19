@@ -19,10 +19,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Paths;
 import java.util.List;
+
+import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
+
 
 /**
  * Created by lmarin on 19/9/2017.
@@ -51,30 +55,36 @@ public class InterventionServlet extends HttpServlet {
 
                     InputStream fileContent = filecontent/*filePart.getInputStream()*/;
                     BufferedImage bi = ImageIO.read(fileContent);
+                    bi = resizeImage(bi,(bi.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : bi.getType()),200,200);
+                    if (bi.getHeight() > 0){
+                        bi = rotateCw(bi);
+                    }
+
 
                     // guarda en el disco duro la informacion
 
-                    /*ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
+                    ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
                     ImageWriteParam iwp = writer.getDefaultWriteParam();
                     iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                    iwp.setCompressionQuality(0.1f);
+                    iwp.setCompressionQuality(1f);
 
+                   /* writer.setOutput(new FileImageOutputStream(
+                            new File(folder.toString() + "/" + filename + ".jpg")));*/
                     writer.setOutput(new FileImageOutputStream(
-                            new File(*//*folder.toString() +*//* "/" + filename + ".jpg")));
-                    writer.setOutput(new FileImageOutputStream(
-                            new File(*//*folder.toString() +*//* *//*"J:\\hitok\\Compartido/"*//* "./"+ filename + "_temp.jpg")));
+                            new File(/*folder.toString()*/  "C:\\Users\\user\\Desktop\\HTML WEB CNTM\\"+ filename + "_temp.jpg")));
 
-                    writer.write(null, new IIOImage(bi, null, null), iwp);*/
+                    writer.write(null, new IIOImage(bi, null, null), iwp);
 
 //                    writer.setOutput(bi);
 
                     ByteArrayOutputStream compressed = new ByteArrayOutputStream();
                     ImageOutputStream outputStream = ImageIO.createImageOutputStream(compressed);
-                    ImageWriter jpgWriter = ImageIO.getImageWritersByFormatName("jpg").next();
+                    ImageWriter jpgWriter = ImageIO.getImageWritersByFormatName("jpeg").next();
 
                     ImageWriteParam jpgWriteParam = jpgWriter.getDefaultWriteParam();
                     jpgWriteParam.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                    jpgWriteParam.setCompressionQuality(0.1f);
+                    jpgWriteParam.setCompressionQuality(1f);
+
 
                     jpgWriter.setOutput(outputStream);
                     jpgWriter.write(null, new IIOImage(bi, null, null), jpgWriteParam);
@@ -99,5 +109,29 @@ public class InterventionServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+    }
+
+    private static BufferedImage resizeImage(BufferedImage originalImage, int type,
+                                             Integer img_width, Integer img_height)
+    {
+        BufferedImage resizedImage = new BufferedImage(img_width, img_height, type);
+        Graphics2D g = resizedImage.createGraphics();
+        g.drawImage(originalImage, 0, 0, img_width, img_height, null);
+        g.dispose();
+
+        return resizedImage;
+    }
+
+    public static BufferedImage rotateCw( BufferedImage img )
+    {
+        int         width  = img.getWidth();
+        int         height = img.getHeight();
+        BufferedImage   newImage = new BufferedImage( height, width, img.getType() );
+
+        for( int i=0 ; i < width ; i++ )
+            for( int j=0 ; j < height ; j++ )
+                newImage.setRGB( height-1-j, i, img.getRGB(i,j) );
+
+        return newImage;
     }
 }
