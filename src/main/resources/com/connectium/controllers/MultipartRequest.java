@@ -244,12 +244,43 @@ public class MultipartRequest {
         return newImage;
     }
 
-    /**
-     * updated: lmarin
-     * date: 21.09.2017
-     *
-    * */
     public void fileSaveAsNombres(String key, String filename, String name) {
+
+        String namitem = null;
+        String nombre = null;
+        if (items != null) {
+            Iterator i = items.iterator();
+            boolean found = false;
+            File file;
+
+            while (i.hasNext() && !found) {
+                FileItem item = (FileItem) i.next();
+                if (item.getName() != null && !item.getName().equals("")) {
+                    nombre = item.getName();
+                    nombre = name;
+                    namitem = nombre.substring(nombre.length() - name.length());
+                }
+                if (item.getFieldName().equals(key) && item.getName() != null) {
+                    found = true;
+                    file = new File(filename);
+
+                    try {
+                        item.write(file);
+                    } catch (Exception e) {
+                        log.error(e);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+    * @author: lmarin
+    * @date: 21.09.2017
+    * Logica copiada del metodo fileSaveAsName, pero se incluyen nuevas funcionalidades como comprimir
+    * imagenes y girar dependiendo de sus grados recibidos por parametros
+    * */
+    public void fileSaveAsName(String key, String filename, String name) {
 
         String namitem = null;
         String nombre = null;
@@ -290,26 +321,17 @@ public class MultipartRequest {
                             ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
                             ImageWriteParam iwp = writer.getDefaultWriteParam();
                             iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                            iwp.setCompressionQuality(1f);
+                            iwp.setCompressionQuality(0.5f);
 
+                            // guardando en la carpeta
                             writer.setOutput(new FileImageOutputStream(
-                                    new File("C:\\Users\\user\\Desktop\\HTML WEB CNTM\\"+ filename + "4_temp.jpg")));
+                                    new File(filename)));
 
                             writer.write(null, new IIOImage(bi, null, null), iwp);
-
                             writer.dispose();
 
                         } catch (IOException e) {
                             e.printStackTrace();
-                        }
-                    } else {
-                        found = true;
-                        file = new File(filename);
-
-                        try {
-                            item.write(file);
-                        } catch (Exception e) {
-                            log.error(e);
                         }
                     }
                 }

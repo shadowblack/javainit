@@ -41,7 +41,7 @@ public class InterventionServlet extends HttpServlet {
 
         MultipartRequest multi = new MultipartRequest(request);
 
-        multi.fileSaveAsNombres("file", "prueba", "prueba");
+        multi.fileSaveAsName("file", "prueba", "prueba");
 
         try {
 
