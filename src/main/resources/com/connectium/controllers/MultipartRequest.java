@@ -321,11 +321,11 @@ public class MultipartRequest {
                             ImageWriter writer = (ImageWriter)ImageIO.getImageWritersByFormatName("jpeg").next();
                             ImageWriteParam iwp = writer.getDefaultWriteParam();
                             iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-                            iwp.setCompressionQuality(0.5f);
+                            iwp.setCompressionQuality(1f);
 
                             // guardando en la carpeta
                             writer.setOutput(new FileImageOutputStream(
-                                    new File(filename)));
+                                    new File("C:\\Users\\user\\Desktop\\HTML WEB CNTM\\"+ filename + "4_temp.jpg")));
 
                             writer.write(null, new IIOImage(bi, null, null), iwp);
                             writer.dispose();

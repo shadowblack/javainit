@@ -70,7 +70,8 @@ public class InterventionServlet extends HttpServlet {
 
                     InputStream fileContent = filecontent/*filePart.getInputStream()*/;
                     BufferedImage bi = ImageIO.read(fileContent);
-                   // bi = resizeImage(bi,(bi.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : bi.getType()),200,200);
+
+                    bi = resizeImage(bi,(bi.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : bi.getType()),200,200);
                     /*bi = scale(bi,0.5);
                     if (bi.getHeight() > 0){
                         bi = rotateCw(bi);
@@ -195,16 +196,16 @@ public class InterventionServlet extends HttpServlet {
     }
 
 
-    public static BufferedImage resizeImage(BufferedImage image,int type, int width, int height) {
+    /*public static BufferedImage resizeImage(BufferedImage image,int type, int width, int height) {
         BufferedImage bi = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);
         Graphics2D g2d = (Graphics2D) bi.createGraphics();
         g2d.addRenderingHints(new RenderingHints(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY));
         g2d.drawImage(image, 0, 0, width, height, null);
         g2d.dispose();
         return bi;
-    }
+    }*/
 
-    /*private static BufferedImage resizeImage(BufferedImage originalImage, int type, Integer img_width, Integer img_height)
+    private static BufferedImage resizeImage(BufferedImage originalImage, int type, Integer img_width, Integer img_height)
     {
 
         BufferedImage resizedImage = new BufferedImage(img_width, img_height, type);
@@ -213,7 +214,7 @@ public class InterventionServlet extends HttpServlet {
         g.dispose();
 
         return resizedImage;
-    }*/
+    }
 
     public static BufferedImage rotateCw( BufferedImage img )
     {
